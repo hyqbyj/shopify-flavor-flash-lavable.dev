@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -18,6 +19,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
+				serif: ['Playfair Display', 'serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -52,15 +57,29 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
+				brand: {
+					50: "#FFF5F5",
+					100: "#FFE6E6",
+					200: "#FFC0C0",
+					300: "#FF9A9A",
+					400: "#FF7474",
+					500: "#FF4D4D",
+					600: "#FF2727",
+					700: "#FF0000",
+					800: "#CC0000",
+					900: "#990000"
+				},
+				cream: {
+					50: "#FFFDF5",
+					100: "#FFFAEB",
+					200: "#FFF3CC",
+					300: "#FFECAD",
+					400: "#FFE58E",
+					500: "#FFDE6F",
+					600: "#FFD74F",
+					700: "#FFD030",
+					800: "#FFC911",
+					900: "#F0BA00"
 				}
 			},
 			borderRadius: {

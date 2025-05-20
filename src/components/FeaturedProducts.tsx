@@ -20,7 +20,7 @@ const FeaturedProducts = () => {
       name: 'Strawberry Cheese Foam',
       price: '$5.49',
       rating: 4.7,
-      image: 'https://images.unsplash.com/photo-1546549095-8d9cb7bcad2b?auto=format&fit=crop&q=80&w=2069',
+      image: 'https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?auto=format&fit=crop&q=80&w=2069',
       category: 'Milk Tea',
       slug: 'strawberry-cheese-foam'
     },
@@ -47,7 +47,7 @@ const FeaturedProducts = () => {
       name: 'Signature Dirty Milk Tea',
       price: '$5.99',
       rating: 4.6,
-      image: 'https://images.unsplash.com/photo-1588929473475-d16de087c70e?auto=format&fit=crop&q=80&w=2069',
+      image: 'https://images.unsplash.com/photo-1500673922987-e212871fec22?auto=format&fit=crop&q=80&w=2069',
       category: 'Milk Tea',
       slug: 'signature-dirty-milk-tea'
     },
@@ -56,7 +56,7 @@ const FeaturedProducts = () => {
       name: 'Assorted Fried Snack Platter',
       price: '$9.99',
       rating: 4.7,
-      image: 'https://images.unsplash.com/photo-1673786132551-e5b53701220e?auto=format&fit=crop&q=80&w=2070',
+      image: 'https://images.unsplash.com/photo-1619221741571-7abc9b71169a?auto=format&fit=crop&q=80&w=2070',
       category: 'Snacks',
       slug: 'assorted-fried-snack-platter'
     }

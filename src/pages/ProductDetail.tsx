@@ -157,9 +157,9 @@ const ProductDetail = () => {
                     {[...Array(5)].map((_, i) => (
                       <Star 
                         key={i} 
-                        size={18} 
                         fill={i < Math.floor(product.rating) ? "currentColor" : "none"} 
                         className={i < Math.floor(product.rating) ? "" : "opacity-40"}
+                        size={18}
                       />
                     ))}
                   </div>

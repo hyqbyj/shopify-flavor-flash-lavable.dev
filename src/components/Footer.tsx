@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { MapPin, Phone, Clock } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -10,7 +11,7 @@ const Footer = () => {
           <div>
             <h3 className="font-serif text-2xl font-bold mb-6">FlavourFlash</h3>
             <p className="opacity-80 mb-6">
-              传统美食，现代风味。带您领略地道风味与创新口感的完美结合。
+              Traditional food with modern flavors. Experience the perfect blend of authentic taste and innovative flavor profiles.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="bg-white/10 hover:bg-white/20 h-10 w-10 rounded-full flex items-center justify-center transition-colors">
@@ -29,25 +30,25 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-xl font-bold mb-6">营业时间</h3>
+            <h3 className="text-xl font-bold mb-6">Opening Hours</h3>
             <ul className="space-y-4">
               <li className="flex items-center">
                 <Clock className="mr-3 h-5 w-5 opacity-70" />
-                <span>周一至周五：10:00 - 21:00</span>
+                <span>Monday - Friday: 10:00 AM - 9:00 PM</span>
               </li>
               <li className="flex items-center">
                 <Clock className="mr-3 h-5 w-5 opacity-70" />
-                <span>周六至周日：09:00 - 22:00</span>
+                <span>Saturday - Sunday: 9:00 AM - 10:00 PM</span>
               </li>
             </ul>
           </div>
           
           <div>
-            <h3 className="text-xl font-bold mb-6">联系我们</h3>
+            <h3 className="text-xl font-bold mb-6">Contact Us</h3>
             <ul className="space-y-4">
               <li className="flex items-start">
                 <MapPin className="mr-3 h-5 w-5 opacity-70 mt-1" />
-                <span>上海市黄浦区南京东路123号时尚广场4楼401室</span>
+                <span>Suite 401, Fashion Plaza, 123 East Nanjing Road, Huangpu District, Shanghai</span>
               </li>
               <li className="flex items-center">
                 <Phone className="mr-3 h-5 w-5 opacity-70" />
@@ -58,7 +59,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-white/10 py-6 text-center">
-          <p className="opacity-70">© 2025 FlavourFlash. 保留所有权利。</p>
+          <p className="opacity-70">© 2025 FlavourFlash. All rights reserved.</p>
         </div>
       </div>
     </footer>

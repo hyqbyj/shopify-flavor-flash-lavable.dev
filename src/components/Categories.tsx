@@ -1,19 +1,22 @@
 
 import React from 'react';
+import { Link } from "react-router-dom";
 
 const Categories = () => {
   const categories = [
     {
       id: 1,
-      name: '奶茶系列',
+      name: 'Milk Tea Series',
       image: 'https://images.unsplash.com/photo-1558857563-b371033873b8?auto=format&fit=crop&q=80&w=2069',
-      description: '甄选上等茶叶，搭配新鲜牛奶，呈现丝滑口感与浓郁茶香'
+      description: 'Select premium tea leaves paired with fresh milk for a smooth texture and rich tea aroma',
+      slug: 'milk-tea'
     },
     {
       id: 2,
-      name: '特色小吃',
+      name: 'Specialty Snacks',
       image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=2070',
-      description: '地道传统风味，创新工艺制作，带来独特美食体验'
+      description: 'Authentic traditional flavors made with innovative techniques for a unique culinary experience',
+      slug: 'snacks'
     }
   ];
 
@@ -21,9 +24,9 @@ const Categories = () => {
     <section id="menu" className="section-padding bg-cream-50">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">我们的美食分类</h2>
+          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">Our Food Categories</h2>
           <p className="text-lg opacity-70 max-w-2xl mx-auto">
-            每一款产品都经过精心研制，只为带给您最纯正的味蕾体验
+            Each product is carefully developed to bring you the most authentic taste experience
           </p>
         </div>
 
@@ -39,12 +42,12 @@ const Categories = () => {
               <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 z-20">
                 <h3 className="font-serif text-2xl md:text-3xl font-bold text-white mb-2">{category.name}</h3>
                 <p className="text-white/80 mb-4">{category.description}</p>
-                <a 
-                  href="#" 
+                <Link 
+                  to={`/category/${category.slug}`}
                   className="inline-block px-6 py-2 bg-white text-foreground rounded-full font-medium hover:bg-cream-100 transition-colors"
                 >
-                  查看详情
-                </a>
+                  View Details
+                </Link>
               </div>
             </div>
           ))}

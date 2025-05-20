@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -12,22 +13,24 @@ const About = () => {
             <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-cream-300 rounded-full -z-10"></div>
             <img 
               src="https://images.unsplash.com/photo-1582562124811-c09040d0a901" 
-              alt="店内环境" 
+              alt="Store Interior" 
               className="rounded-2xl shadow-xl w-full h-auto object-cover"
             />
           </div>
           <div className="order-1 lg:order-2">
-            <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6">我们的故事</h2>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6">Our Story</h2>
             <p className="text-lg opacity-80 mb-6">
-              我们创立于2018年，致力于将传统美食与现代口味完美融合。每一款产品都凝聚了我们对美食的热爱与执着。
+              Founded in 2018, we are dedicated to perfectly blending traditional foods with modern flavors. Each product embodies our passion and commitment to culinary excellence.
             </p>
             <p className="text-lg opacity-80 mb-6">
-              从选料到制作，我们坚持最高标准，只为带给顾客最纯正的味蕾体验。我们的茶叶来自高山茶园，牛奶选用进口优质奶源，食材新鲜健康。
+              From ingredient selection to preparation, we maintain the highest standards to deliver the most authentic taste experience. Our teas come from premium mountain tea gardens, and we use only imported high-quality milk sources and fresh ingredients.
             </p>
             <p className="text-lg opacity-80 mb-8">
-              无论您是奶茶爱好者还是美食追求者，在这里都能找到属于您的味道。欢迎来到我们的美食世界！
+              Whether you're a milk tea enthusiast or a food explorer, you'll find your perfect flavor here. Welcome to our culinary world!
             </p>
-            <Button size="lg">了解更多</Button>
+            <Button size="lg" asChild>
+              <Link to="/about">Learn More</Link>
+            </Button>
           </div>
         </div>
       </div>

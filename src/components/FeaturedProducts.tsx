@@ -2,56 +2,63 @@
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Star } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const FeaturedProducts = () => {
   const products = [
     {
       id: 1,
-      name: '经典珍珠奶茶',
-      price: '¥16',
+      name: 'Classic Pearl Milk Tea',
+      price: '$4.99',
       rating: 4.8,
       image: 'https://images.unsplash.com/photo-1558857563-b371033873b8?auto=format&fit=crop&q=80&w=2069',
-      category: '奶茶'
+      category: 'Milk Tea',
+      slug: 'classic-pearl-milk-tea'
     },
     {
       id: 2,
-      name: '芝士草莓奶盖',
-      price: '¥18',
+      name: 'Strawberry Cheese Foam',
+      price: '$5.49',
       rating: 4.7,
-      image: 'https://images.unsplash.com/photo-1558857563-b371033873b8?auto=format&fit=crop&q=80&w=2069',
-      category: '奶茶'
+      image: 'https://images.unsplash.com/photo-1546549095-8d9cb7bcad2b?auto=format&fit=crop&q=80&w=2069',
+      category: 'Milk Tea',
+      slug: 'strawberry-cheese-foam'
     },
     {
       id: 3,
-      name: '香辣鸡翅',
-      price: '¥22',
+      name: 'Spicy Chicken Wings',
+      price: '$6.99',
       rating: 4.9,
-      image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=2070',
-      category: '小吃'
+      image: 'https://images.unsplash.com/photo-1608039755401-52ee9cfd2984?auto=format&fit=crop&q=80&w=2070',
+      category: 'Snacks',
+      slug: 'spicy-chicken-wings'
     },
     {
       id: 4,
-      name: '台式盐酥鸡',
-      price: '¥26',
+      name: 'Taiwanese Salt & Pepper Chicken',
+      price: '$7.99',
       rating: 4.8,
-      image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=2070',
-      category: '小吃'
+      image: 'https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&q=80&w=2070',
+      category: 'Snacks',
+      slug: 'taiwanese-salt-pepper-chicken'
     },
     {
       id: 5,
-      name: '招牌脏脏茶',
-      price: '¥20',
+      name: 'Signature Dirty Milk Tea',
+      price: '$5.99',
       rating: 4.6,
-      image: 'https://images.unsplash.com/photo-1558857563-b371033873b8?auto=format&fit=crop&q=80&w=2069',
-      category: '奶茶'
+      image: 'https://images.unsplash.com/photo-1588929473475-d16de087c70e?auto=format&fit=crop&q=80&w=2069',
+      category: 'Milk Tea',
+      slug: 'signature-dirty-milk-tea'
     },
     {
       id: 6,
-      name: '手工炸串拼盘',
-      price: '¥32',
+      name: 'Assorted Fried Snack Platter',
+      price: '$9.99',
       rating: 4.7,
-      image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=2070',
-      category: '小吃'
+      image: 'https://images.unsplash.com/photo-1673786132551-e5b53701220e?auto=format&fit=crop&q=80&w=2070',
+      category: 'Snacks',
+      slug: 'assorted-fried-snack-platter'
     }
   ];
 
@@ -59,9 +66,9 @@ const FeaturedProducts = () => {
     <section className="section-padding">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">热门推荐</h2>
+          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">Popular Items</h2>
           <p className="text-lg opacity-70 max-w-2xl mx-auto">
-            我们最受欢迎的产品，每一款都值得您亲自品尝
+            Our most loved products, each one worth trying
           </p>
         </div>
 
@@ -95,6 +102,14 @@ const FeaturedProducts = () => {
                     ))}
                   </div>
                   <span className="text-sm opacity-70">{product.rating}</span>
+                </div>
+                <div className="mt-4">
+                  <Link 
+                    to={`/product/${product.slug}`}
+                    className="text-brand-600 font-medium hover:underline"
+                  >
+                    View Details
+                  </Link>
                 </div>
               </CardContent>
             </Card>
